@@ -1,2 +1,3 @@
+content l10n ./
 locale l10n en-US locale/en-US/
 locale l10n en-GB locale/en-GB/

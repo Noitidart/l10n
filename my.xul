@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+    <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+	<!DOCTYPE window SYSTEM "chrome://l10n/locale/my.dtd">
+    <window onload="welcomeMsg()" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+		<script type="application/javascript">
+		<![CDATA[
+			function welcomeMsg() {
+			  //alert('&my.title;'); // this does not work!!
+			}
+		]]>
+		</script>
+		<label value="&my.title;" />
+		<label value="&my.quote;" />
+    </window>

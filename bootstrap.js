@@ -7,7 +7,9 @@ function install() {}
 function uninstall() {}
 
 function startup() {
-	Services.prompt.alert(null, stringBundle.GetStringFromName('startup_prompt_title'), stringBundle.GetStringFromName('startup_prompt_message'));
+	var aDOMWindow = Services.wm.getMostRecentWindow('navigator:browser');
+	aDOMWindow.gBrowser.addTab('chrome://l10n/content/my_html.xhtml');
+	aDOMWindow.gBrowser.addTab('chrome://l10n/content/my.xul');
 }
  
 function shutdown() {}
