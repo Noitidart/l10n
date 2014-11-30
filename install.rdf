@@ -23,5 +23,7 @@
 		<em:name>l10n</em:name>
 		<em:description>ff-addon-demo: Shows how to localize restartless add-ons. </em:description>
 		<em:creator>Noitidart</em:creator>
+		<em:optionsType>3</em:optionsType>
+		<em:optionsURL>chrome://l10n/content/my_options.xhtml</em:optionsURL>
 	  </Description>
 	</RDF>
