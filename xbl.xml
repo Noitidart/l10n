@@ -32,7 +32,9 @@
   <binding id="browser-toolbar">
     <content>
       <xul:toolbar>
-        <xul:button label="Home" xbl:inherits="command=cmd_home"/>
+        <xul:button label="Home" xbl:inherits="command=cmd_home">
+          <observes xbl:inherits="element=cmd_home" attribute="disabled"/>
+        </xul:button>
         <xul:toolbarbutton label="Back" xbl:inherits="command=cmd_back"/>
       </xul:toolbar>
     </content>
