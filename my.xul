@@ -21,5 +21,9 @@
 			<toolbarbutton label="Back"/>
 		</toolbar>
 		
-		<vbox id="myBtn" style="background-color:steelblue;-moz-binding:url(chrome://l10n/content/xbl.xml#my);"></vbox>
+		<vbox id="myBtn" style="background-color:steelblue;-moz-binding:url(chrome://l10n/content/xbl.xml#my);">
+			<label value="i get replaced"/>
+		</vbox>
+		
+		<vbox id="myCustBrowser" style="-moz-binding:url(chrome://l10n/content/xbl.xml#custom-browser-type-a')"/>
 	</window>
