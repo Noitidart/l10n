@@ -8,29 +8,24 @@
       <xul:commandset>
         <xul:command id="TypeA:Home" oncommand="home()"/>
         <xul:command id="TypeA:Back" oncommand="back()"/>
-        <xul:command id="enableHome" oncommand="this.parentNode.ownerDocument.getElementById('TypeA:Home').setAttribute('disabled', true)"/>
-        <xul:command id="disableHome" oncommand="this.parentNode.ownerDocument.getElementById('TypeA:Home').removeAttribute('disabled')"/>
+        <xul:command id="disableHome" oncommand="this.parentNode.ownerDocument.getElementById('TypeA:Home').setAttribute('disabled', true)"/>
+        <xul:command id="enableHome" oncommand="this.parentNode.ownerDocument.getElementById('TypeA:Home').removeAttribute('disabled')"/>
       </xul:commandset>
       <xul:hbox style="-moz-binding:url('chrome://l10n/content/xbl.xml#browser-toolbar')" cmd_home="TypeA:Home" cmd_back="TypeA:Back"/>
       <xul:browser style="background-color:red; width:100px; height:100px;"/>
       <xul:button label="disable home" command="disableHome"/>
       <xul:button label="enable home" command="enableHome"/>
+      <xul:button label="Home2" command="TypeA:Home"/>
+      <xul:button label="Home3" command="TypeA:Home"/>
     </content>
   </binding>
   
   <binding id="browser-toolbar">
     <content>
       <xul:toolbar>
-        <xul:toolbarbutton label="Home" xbl:inherits="command=cmd_home"/>
+        <xul:button label="Home" xbl:inherits="command=cmd_home"/>
         <xul:toolbarbutton label="Back" xbl:inherits="command=cmd_back"/>
-      </xul:toolbar>        
-    </content>
-  </binding>
-  
-  <binding id="my"> <!-- does not replace content, if it has no children it inserts this, but if it has children it wont insert this button -->
-    <content>
-      <children/>
-      <xul:button label="my button 1" xbl:inherits="command=cmd_home"/>
+      </xul:toolbar>
     </content>
   </binding>
 </bindings>
