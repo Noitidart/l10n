@@ -20,4 +20,6 @@
 			<toolbarbutton label="Home"/>
 			<toolbarbutton label="Back"/>
 		</toolbar>
+		
+		<vbox id="myBtn" style="background-color:steelblue;-moz-binding:url(chrome://l10n/content/xbl.xml#my);"></vbox>
 	</window>
