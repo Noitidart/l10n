@@ -22,9 +22,9 @@
       </xul:commandset>
       <xul:hbox anonid="browser-toolbar" style="-moz-binding:url('chrome://l10n/content/xbl.xml#browser-toolbar')" cmd_home="TypeA:Home" cmd_back="TypeA:Back"/>
       <xul:browser style="background-color:red; width:100px; height:100px;"/>
-      <xul:button label="disable home" command="disableHome" observes="TypeA:Home" /> <!-- works -->
+      <xul:button label="disable home" command="disableHome" observes="TypeA:Home" />
       <xul:button label="disable home" command="disableHome">
-        <observes element="TypeA:Home" attribute="disabled"/>  <!-- should work, but its not -->
+        <xul:observes element="TypeA:Home" attribute="disabled"/>
       </xul:button>
       <xul:button label="enable home" command="enableHome"/>
       <xul:button label="Home2" command="TypeA:Home"/>
