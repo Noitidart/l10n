@@ -21,11 +21,11 @@
         <toolbarbutton label="Back" xbl:inherits="command=cmd_back"/>
       </toolbar>        
     </content>
-  </bindin>g
+  </binding>
   
-  <binding id="my">
+  <binding id="my"> <!-- replaces contents of whatever this binding is applied to with this-->
     <content>
-      <xul:button label="my button" xbl:inherits="command=cmd_home"/>
+      <xul:button label="my button 1" xbl:inherits="command=cmd_home"/>
     </content>
   </binding>
 </bindings>
