@@ -14,5 +14,10 @@
 		</script>
 		<label value="&my.title;" />
 		<label value="&my.quote;" />
-		<vbox id="myToolbar" style="-moz-binding:url(chrome://l10n/content/xbl.xml#browser-toolbar);"></vbox>
+		<vbox id="myToolbar" style="background-color:steelblue;-moz-binding:url(chrome://l10n/content/xbl.xml#browser-toolbar);"></vbox>
+		
+		<toolbar>
+			<toolbarbutton label="Home"/>
+			<toolbarbutton label="Back"/>
+		</toolbar>
 	</window>
