@@ -5,12 +5,16 @@
 <bindings xmlns="http://www.mozilla.org/xbl" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml">
   <binding id="custom-browser-type-a">
     <content>
-      <commandset>
-        <command id="TypeA:Home" oncommand="home()"/>
-        <command id="TypeA:Back" oncommand="back()"/>
-      </commandset>
-      <browser-toolbar cmd_home="TypeA:Home" cmd_back="TypeA:Back"/>
-      <xul:browser/>
+      <xul:commandset>
+        <xul:command id="TypeA:Home" oncommand="home()"/>
+        <xul:command id="TypeA:Back" oncommand="back()"/>
+        <xul:command id="enableHome" oncommand="this.parentNode.ownerDocument.getElementById('TypeA:Home').setAttribute('disabled', true)"/>
+        <xul:command id="disableHome" oncommand="this.parentNode.ownerDocument.getElementById('TypeA:Home').removeAttribute('disabled')"/>
+      </xul:commandset>
+      <xul:hbox style="-moz-binding:url('chrome://l10n/content/xbl.xml#browser-toolbar')" cmd_home="TypeA:Home" cmd_back="TypeA:Back"/>
+      <xul:browser style="background-color:red; width:100px; height:100px;"/>
+      <xul:button label="disable home" command="disableHome"/>
+      <xul:button label="enable home" command="enableHome"/>
     </content>
   </binding>
   
@@ -23,8 +27,9 @@
     </content>
   </binding>
   
-  <binding id="my"> <!-- replaces contents of whatever this binding is applied to with this-->
+  <binding id="my"> <!-- does not replace content, if it has no children it inserts this, but if it has children it wont insert this button -->
     <content>
+      <children/>
       <xul:button label="my button 1" xbl:inherits="command=cmd_home"/>
     </content>
   </binding>
