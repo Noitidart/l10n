@@ -12,6 +12,13 @@
         //browserToolbar.style.MozBinding = this.ownerDocument.defaultView.location + 'xbl.xml'
         //commented this out because this location is location of xul file not of the xbl file
       </constructor>
+      <method name="home">
+        <body>
+          <![CDATA[
+            alert("home is clicked");
+          ]]>
+        </body>
+      </method>
     </implementation>
     <content>
       <xul:commandset>
