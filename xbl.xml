@@ -10,16 +10,16 @@
         <command id="TypeA:Back" oncommand="back()"/>
       </commandset>
       <browser-toolbar cmd_home="TypeA:Home" cmd_back="TypeA:Back"/>
-      <browser/>
+      <xul:browser/>
     </content>
   </binding>
   
   <binding id="browser-toolbar">
     <content>
-      <toolbar>
-        <toolbarbutton label="Home" xbl:inherits="command=cmd_home"/>
-        <toolbarbutton label="Back" xbl:inherits="command=cmd_back"/>
-      </toolbar>        
+      <xul:toolbar>
+        <xul:toolbarbutton label="Home" xbl:inherits="command=cmd_home"/>
+        <xul:toolbarbutton label="Back" xbl:inherits="command=cmd_back"/>
+      </xul:toolbar>        
     </content>
   </binding>
   
