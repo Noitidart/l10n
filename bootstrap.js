@@ -8,6 +8,8 @@ function uninstall() {}
 
 function startup() {
 	Services.prompt.alert(null, stringBundle.GetStringFromName('startup_prompt_title'), stringBundle.GetStringFromName('startup_prompt_message'));
+	var replacements = ['first rep', '2nd replaced', 'and last one replaced'];
+	Services.prompt.alert(null, stringBundle.GetStringFromName('startup_prompt_title'), stringBundle.formatStringFromName('msg_with_replacements', replacements, replacements.length));
 }
  
 function shutdown() {}
