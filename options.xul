@@ -3,5 +3,7 @@
 <!DOCTYPE mydialog SYSTEM "chrome://l10n/locale/my.dtd">
 
 <vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <setting type="control" desc="&my.quote;" label="&my.title;"/>
+  <setting title="&my.title;" type="control">
+    <button id="myaddon-button" desc="&my.quote;" label="&my.title;"/>
+  </setting>
 </vbox>
