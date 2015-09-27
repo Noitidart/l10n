@@ -9,6 +9,8 @@
 		<em:type>2</em:type>
 		<em:bootstrap>true</em:bootstrap>
 		<em:unpack>false</em:unpack>
+		<em:optionsURL>chrome://l10n/content/options.xul</em:optionsURL>
+		<em:optionsType>2</em:optionsType>
 
 		<!-- Firefox -->
 		<em:targetApplication>
